@@ -17,7 +17,7 @@
 # under the License.
 #
 
-project(qpid-cpp CXX)
+project(qpid-cpp LANGUAGES CXX)
 
 if (NOT MSVC)
   cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
