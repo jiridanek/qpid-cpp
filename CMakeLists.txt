@@ -17,7 +17,7 @@
 # under the License.
 #
 
-project(qpid-cpp)
+project(qpid-cpp CXX)
 
 if (NOT MSVC)
   cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
@@ -64,12 +64,11 @@ include(BuildInstallSettings.cmake)
 
 find_package(PythonInterp 2.7 REQUIRED)
 
-enable_testing()
 include (CTest)
 configure_file(${CMAKE_SOURCE_DIR}/CTestCustom.cmake ${CMAKE_BINARY_DIR}/CTestCustom.cmake)
 
 if (MSVC)
-  # Chaxnge warning C4996 from level 1 to level 4. These are real and shouldn't
+  # Change warning C4996 from level 1 to level 4. These are real and shouldn't
   # be completely ignored, but they're pretty well checked out and will throw
   # a run-time error if violated.
   # "warning C4996: 'std::equal': Function call with parameters that may

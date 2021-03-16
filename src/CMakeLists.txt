@@ -383,7 +383,7 @@ mark_as_advanced(QPID_BROKER_SASL_NAME)
 # Optional SSL/TLS support. Requires Netscape Portable Runtime on Linux.
 
 # According to some cmake docs this is not a reliable way to detect
-# pkg-configed libraries, but it's no worse than what we did under
+# pkg-configured libraries, but it's no worse than what we did under
 # autotools
 pkg_check_modules(NSS nss)
 
